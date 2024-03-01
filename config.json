@@ -20,5 +20,9 @@
         "10":"Oktober",
         "11":"November",
         "12":"Desember"
+    },
+    "menu":
+    {
+        "1":"GenPassword"
     }
 }
