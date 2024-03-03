@@ -32,17 +32,14 @@ class CustomDialog(simpledialog.Dialog):
         __folder_path = self.__entry_path.get()
 
         if not __name:
-            self.__show_warning_dialog("Error", "Please enter a name")
+            self.__show_error_dialog("Error", "Please enter a name")
             return
 
         if not __folder_path:
-            self.__show_warning_dialog("Error", "Please select a folder")
+            self.__show_error_dialog("Error", "Please select a folder")
             return
 
-        self.__result = (__folder_path, __name)
-
-    def get_result(self):
-        return self.__result
+        self.result = (__folder_path, __name)
     
-    def __show_warning_dialog(self, title:str, message:str):
-        messagebox.showwarning(title, message)
+    def __show_error_dialog(self, title:str, message:str):
+        messagebox.showerror(title, message)

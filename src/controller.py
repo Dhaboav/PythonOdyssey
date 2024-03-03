@@ -2,7 +2,7 @@ import os
 from src.view import View
 from random import randint
 from src.model import Model
-from custom_dialog import CustomDialog
+from src.custom_dialog import CustomDialog
 
 
 class Controller:
@@ -56,7 +56,7 @@ class Controller:
 
         elif __result == 'ChangeFileName':
             __change = CustomDialog(root=self.__master)
-            __feedback = __change.get_result()
+            __feedback = __change.result
             if __feedback:
                 __folder_path, __name = __feedback
                 self.__change_file(folder_path=__folder_path, name_format=__name + '{}')
