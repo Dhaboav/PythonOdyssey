@@ -14,9 +14,15 @@ class View:
             foreground='white', background='blue', 
             command=lambda: self.__controller.handle_menu_button(menu_id='1')
         )
+        __change_button = tk.Button(
+            master=__menu_frame, text='Change File Name', width=20, 
+            foreground='white', background='blue', 
+            command=lambda: self.__controller.handle_menu_button(menu_id='2')
+        )
 
         __menu_frame.pack()
         __pass_button.pack()
+        __change_button.pack(pady=5)
 
     def show_info_dialog(self, title:str, message:str):
         messagebox.showinfo(title, message)

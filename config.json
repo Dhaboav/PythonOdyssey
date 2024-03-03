@@ -23,6 +23,7 @@
     },
     "menu":
     {
-        "1":"GenPassword"
+        "1":"GenPassword",
+        "2":"ChangeFileName"
     }
 }
